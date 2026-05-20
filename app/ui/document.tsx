@@ -1,14 +1,14 @@
-import { css, type RemixNode } from 'remix/ui'
+import { css, type RemixNode } from "remix/ui";
 
-import { routes } from '../routes.ts'
+import { routes } from "../routes.ts";
 
 export interface DocumentProps {
-  children?: RemixNode
-  head?: RemixNode
-  title?: string
+  children?: RemixNode;
+  head?: RemixNode;
+  title?: string;
 }
 
-const DEFAULT_TITLE = readAppDisplayName('Remix')
+const DEFAULT_TITLE = readAppDisplayName("Remix%20Test");
 
 export function Document() {
   return ({ children, head, title = DEFAULT_TITLE }: DocumentProps) => (
@@ -22,12 +22,16 @@ export function Document() {
       </head>
       <body mix={css({ margin: 0 })}>
         {children}
-        <script type="module" src={routes.assets.href({ path: 'app/assets/entry.ts' })}></script>
+        <script
+          type="module"
+          src={routes.assets.href({ path: "app/assets/entry.ts" })}
+        >
+        </script>
       </body>
     </html>
-  )
+  );
 }
 
 function readAppDisplayName(value: string): string {
-  return value.startsWith('%%') ? 'Remix App' : decodeURIComponent(value)
+  return value.startsWith("%%") ? "Remix App" : decodeURIComponent(value);
 }

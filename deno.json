@@ -1,0 +1,23 @@
+{
+  "tasks": {
+    "dev": "NODE_ENV=development deno serve --watch-hmr -P --port 44100 server.ts",
+    "start": "deno serve -P --port 44100 server.ts"
+  },
+  "imports": {
+    "remix": "npm:remix@^3.0.0-beta.2"
+  },
+  "permissions": {
+    "default": {
+      "env": true,
+      "ffi": true,
+      "read": ["."]
+    }
+  },
+  "nodeModulesDir": "auto",
+  "exclude": ["*.md", ".agents/", "public/"],
+  "lint": {
+    "rules": {
+      "exclude": ["prefer-const"]
+    }
+  }
+}

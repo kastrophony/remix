@@ -22,8 +22,11 @@ A minimal Remix application starter with a home page.
 ## Commands
 
 ```sh
-npm i
-npm run start
-npm test
-npm run typecheck
+deno install
+
+deno run dev
+deno run start
+
+deno lint
+deno check
 ```

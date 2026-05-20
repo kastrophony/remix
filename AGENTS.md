@@ -5,10 +5,13 @@ This app was scaffolded with `remix new`. Use these conventions when continuing 
 ## Commands
 
 ```sh
-npm i
-npm run start
-npm test
-npm run typecheck
+deno install
+
+deno run dev
+deno run start
+
+deno lint
+deno check
 ```
 
 ## Building Features
